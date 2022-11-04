@@ -37,11 +37,11 @@ class DallE:
 
     def get_api_key(self) -> str:
         """
-        Get the API key from the settings file.
+        Get the API key from the auth file.
 
         Returns:
             str: The API key.
         """
-        with open("settings.json") as f:
+        with open("auth.json") as f:
             settings = json.load(f)
             return settings["apiKey"]

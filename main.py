@@ -18,10 +18,21 @@ def main():
     # Create the images
     image_urls = dall_e.create_images(prompt=prompt, size=size, n=n)
 
+    # Save images to outputs folder
+    path = "outputs"
+    save_images(path, image_urls)
+    # print_urls(image_urls)
+
+
+def print_urls(image_urls):
     # Print the url of the images
     for url in image_urls:
         print("\n")
         print(url)
+
+
+def save_images(path: str, image_urls: list) -> None:
+    pass
 
 
 if __name__ == "__main__":
